@@ -6,7 +6,7 @@
  *   (named "draggable" by default - but you can use any other name)
  * 
  * @author    Axel Hahn
- * @version   0.05
+ * @version   1.0
  *
  * @this addi
  * 
@@ -25,9 +25,6 @@ var addi = function(){
         _saveData: [],
         _dragClass: 'draggable',
         _draggingClass: 'isdragging',
-
-        // opacity value during dragging
-        _dragOpacity: 0.8,
 
         // last z-index value of last activated div 
         _addi_zIndex: 100,
@@ -342,7 +339,6 @@ var addi = function(){
                     posY = evt.clientY,
                     aX = posX - diffX,
                     aY = posY - diffY;
-                // oDiv2Drag.style.opacity=addi._dragOpacity;
                 addi.move(oDiv2Drag,aX,aY);
             };
             return true;
@@ -357,14 +353,8 @@ var addi = function(){
             oDiv2Drag.style.cursor='default';
             // retore styles
             this._styleRestore(oDiv2Drag);
-
-            // for FF only:
-            // if (navigator.appCodeName==='Mozilla' && navigator.userAgent.indexOf('Firefox/')>0){
             document.body.style.userSelect='auto';
-            // oDiv2Drag.style.opacity=1;
-            // oDiv2Drag.style.transition=this._saveData[oDiv2Drag.id].transition;
-            // this._saveData[oDiv2Drag.id]=false;
-
+            oDiv2Drag.className=oDiv2Drag.className.replace(' '+this._draggingClass, '');
             oDiv2Drag.className=oDiv2Drag.className.replace(this._draggingClass, '');
             
             document.onmousemove = function(){};
@@ -412,8 +402,6 @@ var addi = function(){
             oDiv2Drag.onmouseup = null;
             oDiv2Drag.onmousedown = null;
             oDiv2Drag.style = '';
-            // FF only
-            // oDiv2Drag.removeAttribute('draggable');
             if(bRemoveLocalstorage){
                 localStorage.removeItem(this._getVarname(oDiv2Drag.id));
             }
