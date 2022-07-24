@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo - ADDI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <link rel="stylesheet" type="text/css" href="example.css" />
+        <script src="../addi.js"></script>
+        
+    </head>
+    <body>
+        <h1>Demo - ADDI :: Custom css class</h1>
+        <nav>
+            <a href="example1.html">Get started</a>
+            <a href="example2.html" class="active">Custom class</a>
+            <a href="example3.html">On screen or on page</a>
+            <a href="example4.html">Style on dragging</a>
+        </nav>
+
+        <!-- ************************************************************** -->
+        
+        <h2>Use a given class</h2>
+        <p>
+            If you have a class for draggable elements already ...<br />
+            then call the init method with the name of your wanted css class.<br />
+            <br />
+            In the example below I change it from the default "draggable"
+            to "dragclass".
+        </p>
+        <pre>
+            &lt;div class="<strong>dragclass</strong> box1">
+                Drag me around :-)
+            &lt;/div>
+
+            ... 
+            
+            &lt;!-- at the end of your document -->
+
+            &lt;script src="/javascript/addi.js"></script>
+            &lt;script>
+                addi.init("<strong>dragclass</strong>");
+            &lt;/script>
+        </pre>
+
+        <div class="dragclass box1">
+            Drag me around on page :-)<br>
+            Here could be some more content.
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="addi.resetPos();"> Reset</button>
+
+		<br /><br /><br /><br />
+        <hr>
+        DOCS: <a href="https://www.axel-hahn.de/docs/amcplayer/index.htm" target="_blank">https://www.axel-hahn.de/docs/amcplayer/index.htm</a>
+        <script>
+            addi.init("dragclass");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo - ADDI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <link rel="stylesheet" type="text/css" href="example.css" />
+        <script src="../addi.js"></script>
+        
+    </head>
+    <body>
+        <h1>Demo - ADDI :: Welcome!</h1>
+        <nav>
+            <a href="example1.html" class="active">Get started</a>
+            <a href="example2.html">Custom class</a>
+            <a href="example3.html">On screen or on page</a>
+            <a href="example4.html">Style on dragging</a>
+        </nav>
+
+        <!-- ************************************************************** -->
+        
+        <h2>Welcome</h2>
+        <p>
+            Welcome to the example section of the ADDI class!<br />
+            With ADDI you can simply add a drag and drop functionality for DIVs
+            (or other html tags) in a webpage.<br />
+            <br />
+            You need...
+        </p>
+        <ul>
+            <li>html code: create a tag with class "draggable" ... and maybe other classes for styling</li>
+            <li>javascript: load the addi.js in your page and run its init method</li>
+        </ul>
+
+        <h2>Try it</h2>
+        <div class="draggable box1">
+            Drag me around on page :-)<br>
+            Here could be some more content.
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="addi.resetPos();"> Reset</button>
+
+        <h2>Snippet</h2>
+        <p>
+            This is the needed code snippet for it:
+        </p>
+        <pre>
+            &lt;div class="<strong>draggable</strong> box1">
+                Drag me around on page :-)&lt;br>
+                Here could be some more content.
+            &lt;/div>
+
+            ... 
+            
+            &lt;!-- at the end of your document -->
+
+            &lt;script src="/javascript/<strong>addi.js</strong>"></script>
+            &lt;script>
+                <strong>addi.init();</strong>
+            &lt;/script>
+        </pre>
+
+		<br /><br /><br /><br />
+        <hr>
+        DOCS: <a href="https://www.axel-hahn.de/docs/amcplayer/index.htm" target="_blank">https://www.axel-hahn.de/docs/amcplayer/index.htm</a>
+        <script>
+            addi.init();
+        </script>
+    </body>
+</html>

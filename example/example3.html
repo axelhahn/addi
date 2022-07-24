@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Demo - ADDI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+        <link rel="stylesheet" type="text/css" href="example.css" />
+        <script src="../addi.js"></script>
+        
+    </head>
+    <body>
+        <h1>Demo - ADDI :: On screen or on page</h1>
+        <nav>
+            <a href="example1.html">Get started</a>
+            <a href="example2.html">Custom class</a>
+            <a href="example3.html" class="active">On screen or on page</a>
+            <a href="example4.html">Style on dragging</a>
+        </nav>
+
+        <!-- ************************************************************** -->
+        
+        <h2>On screen or on page</h2>
+        <p>
+            The DIVs can be moved relative to the page or relative to the screen.<br />
+            Both DIVs below are movable. If you scroll the page then one is fixed
+            on the screen and theother one stays on its position relative to the page content.
+        </p>
+
+        <h2>Try it</h2>
+        <p>
+            Drag and drop the divs and scroll the page.
+        </p>
+        <div class="draggable box2">
+            Drag me around on screen :-)
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="draggable box1">
+            Drag me around on page :-)<br>
+            Here could be some more content.
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button onclick="addi.resetPos();"> Reset</button>
+        <h2>Snippet</h2>
+        <p>
+            What the trick is? You can influence it by the css attribute "position".<br>
+        </p>
+        <ul>
+            <li>absolute - make it movable on the page</li>
+            <li>fixed - make it movable on the screen</li>
+        </ul>
+        <pre>
+            &lt;div class="draggable <strong>box2</strong>">
+                Drag me around on screen :-)
+            &lt;/div>
+
+            &lt;div class="draggable <strong>box1</strong>">
+                Drag me around on page :-)&lt;br>
+                Here could be some more content.
+            &lt;/div>
+        </pre>
+        <p>
+            The CSS code:
+        </p>
+        <pre>
+            .<strong>box1</strong>{
+                ...
+                position: <strong>absolute</strong>;
+            }
+            .<strong>box2</strong>{
+                ...
+                position: <strong>fixed</strong>;
+            }
+        </pre>
+		<br /><br /><br /><br />
+        <hr>
+        DOCS: <a href="https://www.axel-hahn.de/docs/amcplayer/index.htm" target="_blank">https://www.axel-hahn.de/docs/amcplayer/index.htm</a>
+        <script>
+            addi.init();
+        </script>
+    </body>
+</html>
