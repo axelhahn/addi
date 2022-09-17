@@ -81,6 +81,27 @@
             }
         </pre>
 
+        <h2>Suggestion: Create a more readable css class</h2>
+        <p>
+            Add css classes to describe the behaviour in a more readable way.:
+        </p>
+        <pre>
+        .draggable-onpage{position: absolute;}
+        .draggable-onscreen{position: fixed;}</pre>
+        <p>
+            To write in your html code
+        </p>
+        <pre>
+            &lt;div class="draggable <strong>draggable-onscreen</strong> box2">
+                Drag me around on screen :-)
+            &lt;/div>
+
+            &lt;div class="draggable <strong>draggable-onpage</strong> box1">
+                Drag me around on page :-)&lt;br>
+                Here could be some more content.
+            &lt;/div>
+        </pre>
+
         <script>
             addi.init();
         </script>
