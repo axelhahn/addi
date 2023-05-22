@@ -10,33 +10,28 @@
         
     </head>
     <body>
-        <h1>Demo - ADDI :: Style on dragging</h1>
+        <h1>Demo - ADDI :: Reset positions</h1>
         <nav>
             <a href="example1.html">Get started</a>
             <a href="example2.html">Custom class</a>
             <a href="example3.html">On screen or on page</a>
-            <a href="example4.html" class="active">Style on dragging</a>
-            <a href="example5.html">Reset position</a>
+            <a href="example4.html">Style on dragging</a>
+            <a href="example5.html" class="active">Reset position</a>
         </nav>
 
         <!-- ************************************************************** -->
         
-        <h2>Style on dragging</h2>
+        <h2>How to reset?</h2>
         <p>
-            In the examples here you have seen it already:
-            while dragging the DIV changes transparency, gets a border and a shadow.<br>
-            What you need to do is to define a css class <em>.isdragging</em>
-            and apply wanted styles here.
+            A few times you saw it in the examples: a reset button.
+            After a click the initial position was restored.<br>
+            <br>
+            The addi class has a method <em>resetPos();</em> to do it.
         </p>
 
         <h2>Snippet</h2>
         <pre>
-            /* define styling on dragging */
-            <strong>.isdragging</strong>{
-                opacity: 0.6;
-                border: 2px dashed;
-                box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.4);
-            }
+            &lt;button onclick="addi.resetPos();"&gt; Reset&lt;/button&gt;
         </pre>
 
         <script>
